@@ -1,0 +1,8 @@
+echo "Booting Middleman"
+
+# DEPENDENCIES ARE SATISFIED WOO
+bundle check || bundle install
+
+killall middleman
+
+bundle exec middleman & (sleep 4 && open http://localhost:4567/)

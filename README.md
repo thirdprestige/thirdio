@@ -1,3 +1,13 @@
+# Third.io
+
+## LiveReload
+
+We have LiveReload configured.  To use, you need LiveReload from [the App Store](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CDIQFjAB&url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Flivereload%2Fid482898991%3Fmt%3D12&ei=Am3pUsKgBYaQ2gXeu4DIDQ&usg=AFQjCNE_E57fBZzo9g-Q8Jjy2SBMBQ5n1g&bvm=bv.60157871,d.b2I) as well as the [Chrome browser extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
+
+## Boot up
+
+Run `bin/bootup` in your project directory to run Bundle, boot up the server, and open the page in your browser.
+
 # Middleman Template with Haml, Sass & Coffeescript
 
 **middleman-hamlsasscoffee** is a [Middleman 3.x](http://middlemanapp.com/) project template with [Compass](http://compass-style.org)/[SASS](http://sass-lang.com/), [HAML](http://haml-lang.com/) and [Coffeescript](http://coffeescript.org). As with all Middleman templates, using [Bundler](http://gembundler.com/) and [Rbenv](https://github.com/sstephenson/rbenv/) is recommended.
