@@ -1,0 +1,53 @@
+@mixin burned-header($leaning: -1px) {
+  h2 {
+    display: block;
+    font-size: 48px;
+    line-height: 1.2em;
+    padding: 1.2em 20px;
+  }
+
+  h2, h2 span, h2 textarea {
+    color: darken(#261c15, 2%);
+    overflow: auto;
+    text: {
+      shadow: $leaning $leaning 2px rgba(0, 0, 0, 0.2);
+      transform: uppercase;
+    }
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(top, #000 0, lighten(#412314, 3%) 100%);
+  }
+
+}
+
+@mixin carnival-tent($color: #47301f, $size: 114px) {
+  @include background-image(
+    linear-gradient(left,
+      darken($color, 4%) 0,
+      darken($color, 3%) 2%,
+      darken($color, 3%) 50%,
+      darken($color, 4%) 50%,
+      darken($color, 3%) 52%,
+      $color 52%,
+      $color 100%
+    )
+  );
+
+  background-size: $size $size;
+}
+
+@mixin glowing($offset: 50%) {
+  @include background-image(
+    asset-url('layout/noise.png'),
+    radial-gradient(
+      $offset 60%, circle cover,
+      lighten($background-secondary, 23%) 0,
+      $background-secondary 50%,
+      darken($background-secondary, 3%) 57%,
+      darken($background-secondary, 5%) 70%
+    )
+  );
+
+  @include box-shadow(darken($background-secondary, 10%) 0 0 36px);
+}

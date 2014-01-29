@@ -1,0 +1,23 @@
+@import "bourbon", "variables", "mixins", "fonts";
+
+html, body {
+  @include background-image(
+    asset-url('layout/noise.png'),
+    linear-gradient(left,
+      $color-primary 0,
+      lighten($color-primary, 3%) 50%,
+      $color-primary 100%)
+   );
+
+  // background-attachment: fixed;
+  font: {
+    family: Futura, "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    stretch: normal;
+    weight: 400;
+  }
+  height: 100%;
+  padding-top: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+  -webkit-font-smoothing: antialiased;
+}
