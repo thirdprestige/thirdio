@@ -1,0 +1,3 @@
+( bundle check || bundle install ) | grep -v satisfied
+
+bundle exec middleman deploy

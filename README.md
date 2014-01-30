@@ -1,12 +1,21 @@
 # Third.io
 
+## Boot up
+
+Run `bin/bootup` in your project directory to run Bundle, boot up the server, and open the page in your browser.
+
+
 ## LiveReload
 
 We have LiveReload configured.  To use, you need LiveReload from [the App Store](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CDIQFjAB&url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Flivereload%2Fid482898991%3Fmt%3D12&ei=Am3pUsKgBYaQ2gXeu4DIDQ&usg=AFQjCNE_E57fBZzo9g-Q8Jjy2SBMBQ5n1g&bvm=bv.60157871,d.b2I) as well as the [Chrome browser extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
 
-## Boot up
+## Stage
 
-Run `bin/bootup` in your project directory to run Bundle, boot up the server, and open the page in your browser.
+Run `bin/stage` to build the site & deploy to the staging environment.
+
+## Deploy
+
+Run `bin/deploy` to build the site & deploy to the production environment.
 
 # Middleman Template with Haml, Sass & Coffeescript
 

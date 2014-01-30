@@ -88,7 +88,7 @@ activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
   # Optional Settings
-  # deploy.remote   = "custom-remote" # remote name or git url, default: origin
+  deploy.remote = ENV['REMOTE'] || 'origin' # remote name or git url, default: origin
   # deploy.branch   = "custom-branch" # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
 end
