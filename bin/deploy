@@ -1,3 +1,23 @@
 ( bundle check || bundle install ) | grep -v satisfied
 
 bundle exec middleman deploy
+
+function save() {
+  git add . -u
+  read -p "== Name your changes: " message
+  git commit -m $message
+  git pull origin master
+  git push origin master
+}
+
+if [ ! `git status | grep 'nothing to commit'` ]; then
+  while true; do
+    echo ""
+    read -p "== Save changes to GitHub? (Y/n) " yn
+    case $yn in
+        [Yy]* ) save break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
+fi
