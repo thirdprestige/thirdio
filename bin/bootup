@@ -1,8 +1,9 @@
-echo "Booting Middleman"
+echo "== The Middleman is Booting"
 
 # DEPENDENCIES ARE SATISFIED WOO
-bundle check || bundle install
+( bundle check || bundle install ) | grep -v satisfied
 
-killall middleman
+# poor man's `killall middleman`
+kill -9 `ps x | grep middleman | cut -f1 -d ' ' | sort -r | tail -n 1` 2> /dev/null || true
 
 bundle exec middleman & (sleep 4 && open http://localhost:4567/)
