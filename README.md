@@ -1,5 +1,11 @@
 # Third.io
 
+## TL;DR
+
+* `bootup` to start
+* `stage` to send to staging
+* `deploy` to show the world
+
 ## Boot up
 
 Run `bin/bootup` in your project directory to run Bundle, boot up the server, and open the page in your browser.
