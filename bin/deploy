@@ -15,7 +15,7 @@ if [ ! `git status | grep 'nothing to commit'` ]; then
     echo ""
     read -p "== Save changes to GitHub? (Y/n) " yn
     case $yn in
-        [Yy]* ) save break;;
+        [Yy]* ) save; break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
