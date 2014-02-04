@@ -14,5 +14,6 @@ git remote -v | grep third-io-staging.git -q || (echo "== Adding staging environ
 git remote -v | grep third-io.git -q || (echo "== Adding origin environment to available remotes." && git remote add origin git@github.com:thirdprestige/third-io.git)  1> /dev/null
 
 # Run!
-bundle exec middleman & (sleep 4 && open http://localhost:4567/)
+bundle exec middleman server --verbose & (sleep 4 && open http://localhost:4567/)
 
+sleep 7d
