@@ -5,6 +5,7 @@ echo "== The Middleman is Booting"
 
 # poor man's `killall middleman`
 kill -9 `ps x | grep middleman | cut -f1 -d ' ' | sort -r | tail -n 1` 2> /dev/null || true
+killall ruby
 
 
 # Set up Staging environment
@@ -16,4 +17,4 @@ git remote -v | grep third-io.git -q || (echo "== Adding origin environment to a
 # Run!
 bundle exec middleman server --verbose & (sleep 4 && open http://localhost:4567/)
 
-sleep 7d
+sleep 7000000000

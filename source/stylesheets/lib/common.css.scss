@@ -9,15 +9,89 @@ html, body {
       $color-primary 100%)
    );
 
-  // background-attachment: fixed;
+  background-attachment: fixed;
+  color: $color-tertiary;
   font: {
-    family: Futura, "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     stretch: normal;
     weight: 400;
   }
   height: 100%;
-  padding-top: 0;
+  padding-top: 3em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 
   -webkit-font-smoothing: antialiased;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.75em;
+  margin: 0 auto;
+  max-width: 40em;
+  padding: 0.5em 3em 0;
+}
+
+h1 {
+  font: {
+    size: 3em;
+  }
+  line-height: 1.8em;
+  margin: 2em auto;
+  max-width: 20em;
+
+  em {
+    display: block;
+    font-size: 0.7em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 5em;
+  margin: 1.5em auto 0;
+  max-width: 30em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 40em;
+  padding: 1.5em 3em 0;
+  text-transform: uppercase;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  ol {
+    font-weight: bold;
+    list-style: none;
+    margin: auto;
+    max-width: 62em;
+    text-transform: uppercase;
+  }
+
+  li {
+    border-right: solid $color-quadrary 2px;
+    float: left;
+    margin: 1em 2em 2em 0;
+    padding: 0 2em 0 0;
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  a {
+    color: $color-tertiary;
+    text-decoration: none;
+  }
 }

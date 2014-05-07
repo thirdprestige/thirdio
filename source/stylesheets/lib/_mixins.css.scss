@@ -51,3 +51,20 @@
 
   @include box-shadow(darken($background-secondary, 10%) 0 0 36px);
 }
+
+@mixin pinstripes() {
+  @include background-image(
+    linear-gradient(left,
+      lighten($color-tertiary, 4%) 0,
+      lighten($color-tertiary, 3%) 2%,
+      lighten($color-tertiary, 3%) 89%,
+      lighten($color-tertiary, 4%) 89%,
+      lighten($color-tertiary, 3%) 90%,
+      $color-tertiary 90%,
+      $color-tertiary 100%
+    )
+  );
+
+  background-size: 18px 18px;
+  color: $color-secondary;
+}

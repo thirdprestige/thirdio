@@ -35,6 +35,17 @@
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}
     = yield
+
+    %nav
+      %ol
+        %li
+          %a(href="#") Drop us a note
+
+        %li 512.394.4015
+
+      // todo: social media goes here
+
+
     -# Javascripts
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'

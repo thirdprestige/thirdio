@@ -1,2 +1,129 @@
 //= require_tree ./vendor
 //= require_tree ./lib
+
+@import "bourbon", "lib/variables", "lib/mixins", "lib/fonts";
+
+#third-introduction {
+  &:before {
+    background: {
+      image: url('http://timedetective.io/assets/pages/landing/background-1af45424a7fc323eb7531cc1776ff817.jpg');
+      position: 0 -35px;
+      repeat: no-repeat;
+      size: 100% auto;
+    }
+    bottom: 0;
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transition: -webkit-filter 0.7s ease 1s;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    // -webkit-filter: blur(3px);
+  }
+
+  &:hover:before {
+    transition: -webkit-filter 0.4s ease 0.2s;
+
+    -webkit-filter: blur(3px);
+  }
+
+  &:hover {
+    p {
+      margin: 0 auto;
+      opacity: 1;
+      transition: all 0.4s ease 0.2s;
+    }
+  }
+
+  background: transparent;
+  margin: 0;
+  padding: 6em 0 15em;
+  position: relative;
+  z-index: 2;
+
+  p {
+    opacity: 0.2;
+    margin: -3em auto 3em;
+    transition: all 0.7s ease 1s;
+  }
+}
+
+#third-offerings {
+  background: url('//d3oq02h3m4c5do.cloudfront.net/assets/layout/bg-e119516dcb103e3ca18d567983c1f3f2.png');
+  background-color: $color-quadrary;
+  box-shadow: -7px 0 7px rgba(0, 0, 0, 0.4);
+  margin: 0;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+#third-cto {
+  box-shadow: -8px 0 8px darken($color-tertiary, 40%);
+}
+
+// Main sections on the home page
+#third-cto, #third-high-performance, #third-training {
+  @include pinstripes;
+
+  margin: 0;
+  padding: 3em 0 0;
+}
+
+#third-training {
+  padding-bottom: 9em;
+}
+
+#third-clientele {
+  overflow: visible;
+  padding: 9em 0 16em;
+
+  ol {
+    font-size: 1.5em;
+    list-style: none;
+    margin: 1.3em auto;
+    max-width: 40em;
+    overflow: visible;
+
+    li {
+      float: left;
+      padding: 1.5em;
+    }
+  }
+}
+
+
+#third-etc {
+  &:before, &:after {
+    bottom: 0;
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  &:before {
+    background: url('//d3oq02h3m4c5do.cloudfront.net/assets/layout/bg-e119516dcb103e3ca18d567983c1f3f2.png'),-webkit-radial-gradient(60% 60%, circle cover, #9B5330 0, #412314 50%, #351D10 57%, #2D180E 70%);
+    z-index: -2;
+  }
+
+  &:after {
+    background: url('//d3oq02h3m4c5do.cloudfront.net/assets/splash/ftr-overlay-5a9329984201d315f6fcc5d5411a97d2.png') no-repeat top right;
+    background-size: 100% auto;
+    z-index: -1;
+  }
+
+  color: $color-tertiary;
+  padding: 3em 0 16em;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
