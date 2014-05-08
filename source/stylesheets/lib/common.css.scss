@@ -35,6 +35,28 @@ p {
   padding: 0.5em 3em 0;
 }
 
+header {
+  &:after {
+    background: url('/images/header.png') no-repeat center left;
+    content: ' ';
+    height: 120%;
+    left: 14em;
+    margin: -30px auto 0;
+    position: absolute;
+    top: 0;
+    width: 50em;
+    z-index: 1;
+  }
+
+  background: url('//d3oq02h3m4c5do.cloudfront.net/assets/layout/bg-e119516dcb103e3ca18d567983c1f3f2.png'),-webkit-radial-gradient(60% 60%, circle cover, #9B5330 0, #412314 50%, #351D10 57%, #2D180E 70%);
+  border: solid #672E06 10px;
+  border-width: 7px 0;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  text-indent: -10000px;
+}
+
 h1 {
   font: {
     size: 3em;
@@ -44,8 +66,10 @@ h1 {
   max-width: 20em;
 
   em {
+    color: darken($color-tertiary, 18%);
     display: block;
     font-size: 0.7em;
+    text-align: right;
   }
 }
 
