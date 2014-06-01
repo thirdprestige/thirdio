@@ -32,7 +32,8 @@
     %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
 
     -# Stylesheets
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'application', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'
+
   %body{class: current_page.data.body_class || 'page'}
     %hr
     %header Third Prestige
@@ -42,11 +43,16 @@
     %nav
       %ol
         %li
-          %a(href="mailto:%68%65%6c%6c%6f@%74%68%69%72%64%70%72%65%73%74%69%67%65.%63%6f%6d") Drop us a note
+          %a(href="mailto:%68%65%6c%6c%6f@%74%68%69%72%64%70%72%65%73%74%69%67%65.%63%6f%6d")
+            %i.fa.fa-envelope-square
+            Drop us a note
 
-        %li 512.394.4015
+        %li
+          %i.fa.fa-mobile
+          512.394.4015
 
       // todo: social media goes here
+    #header-blur
 
 
     -# Javascripts

@@ -1,8 +1,9 @@
 @import "bourbon", "variables", "mixins", "fonts";
 
 html, body {
+  background-color: #000;
   @include background-image(
-    asset-url('layout/noise.png'),
+    url('/images/layout/noise.png'),
     linear-gradient(left,
       $color-primary 0,
       lighten($color-primary, 3%) 50%,
@@ -37,11 +38,12 @@ p {
 
 hr {
   background: url('//d3oq02h3m4c5do.cloudfront.net/assets/layout/bg-e119516dcb103e3ca18d567983c1f3f2.png'),  -webkit-radial-gradient(60% 60%, circle cover, #9B5330 0, #412314 50%, #351D10 57%, #2D180E 70%);
-  height: 60px;
+  height: 70px;
   margin: 0 -5% -7px;
-  width: 110%;
+  width: 104.4%;
 
   -webkit-filter: blur(5px);
+  -webkit-transform: translateZ(0);
 }
 
 header {
@@ -53,11 +55,13 @@ header {
   }
 
   &:after {
-    background: url('/images/header.png') no-repeat center left;
+    // Do not use no-repeat here,
+    // as it interferes with the html2canvas rendering
+    background: url('/images/header.png') center left;
     height: 120%;
     left: 14em;
     margin: -30px auto 0;
-    width: 50em;
+    width: 15em;
     z-index: 5;
   }
 
@@ -102,13 +106,16 @@ h3 {
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  color: #111;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 
   ol {
+    float: right;
     font-weight: bold;
     list-style: none;
     margin: auto;
@@ -117,10 +124,14 @@ nav {
   }
 
   li {
-    border-right: solid $color-quadrary 2px;
+    background: rgba(255, 255, 255, 0.8);
+    // border-right: solid $color-quadrary 2px;
+    border-radius: 4px;
+    // box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
     float: left;
-    margin: 1em 2em 2em 0;
-    padding: 0 2em 0 0;
+    line-height: 2.5em;
+    margin: 0.75em 2em 1.25em 0;
+    padding: 0 1em;
 
     &:last-of-type {
       border-right: none;
@@ -128,7 +139,33 @@ nav {
   }
 
   a {
-    color: $color-tertiary;
+    color: #111;
     text-decoration: none;
+  }
+
+  i {
+    // color: #333;
+    margin-right: 5px;
+  }
+
+}
+
+#header-blur {
+  display: none;
+  height: 72px;
+  left: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
 }

@@ -4,9 +4,11 @@
 @import "bourbon", "lib/variables", "lib/mixins", "lib/fonts";
 
 #third-introduction {
+  position: relative;
+
   &:before {
     background: {
-      image: url('http://timedetective.io/assets/pages/landing/background-1af45424a7fc323eb7531cc1776ff817.jpg');
+      image: url('skyline.jpg');
       position: 0 -35px;
       repeat: no-repeat;
       size: 100% auto;
@@ -30,7 +32,11 @@
     -webkit-transform: translateZ(0);
   }
 
-  &:hover {
+  &.initial:before {
+    display: none;
+  }
+
+  &:hover, &.initial {
     p {
       margin: 0 auto;
       opacity: 1;
