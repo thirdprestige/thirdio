@@ -8,7 +8,7 @@
 
   &:before {
     background: {
-      image: url('skyline.jpg');
+      image: url('/images/skyline.jpg');
       position: 0 -35px;
       repeat: no-repeat;
       size: 100% auto;
@@ -57,8 +57,13 @@
   }
 }
 
+.third-inner {
+  margin: auto;
+  max-width: 80em;
+}
+
 #third-offerings {
-  background: url('//d3oq02h3m4c5do.cloudfront.net/assets/layout/bg-e119516dcb103e3ca18d567983c1f3f2.png');
+  background: url('/images/layout/bg.png');
   background-color: $color-quadrary;
   box-shadow: -7px 0 7px rgba(0, 0, 0, 0.4);
   margin: 0;
@@ -71,6 +76,12 @@
 #third-cto {
   box-shadow: -8px 0 15px darken($color-tertiary, 60%);
   z-index: 5;
+
+  img {
+    float: left;
+    margin: 7em 4em;
+    width: 16em;
+  }
 }
 
 // Main sections on the home page
@@ -79,6 +90,14 @@
 
   margin: 0;
   padding: 3em 0 0;
+}
+
+#third-high-performance {
+  img {
+    float: right;
+    margin: 4em 2em;
+    width: 18em;
+  }
 }
 
 #third-training {
@@ -104,6 +123,41 @@
 }
 
 
+#third-projects {
+  min-height: 40em;
+  position: relative;
+  padding-top: 2em;
+
+  h3 {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    padding: 0.35em 0.75em;
+  }
+
+  ol {
+    list-style: none;
+    padding: 10em 5em;
+    text-align: center;
+
+    li {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 4px;
+      display: inline-block;
+      font: {
+        size: 1.5em;
+        // weight: bold;
+      }
+      margin-right: 1.8em;
+      padding: 0.35em 0.75em;
+
+      img {
+
+      }
+    }
+  }
+}
+
+
 #third-etc {
   &:before, &:after {
     bottom: 0;
@@ -117,18 +171,18 @@
   }
 
   &:before {
-    background: url('//d3oq02h3m4c5do.cloudfront.net/assets/layout/bg-e119516dcb103e3ca18d567983c1f3f2.png'),-webkit-radial-gradient(60% 60%, circle cover, #9B5330 0, #412314 50%, #351D10 57%, #2D180E 70%);
+    background: url('/images/layout/bg.png'),-webkit-radial-gradient(60% 60%, circle cover, #9B5330 0, #412314 50%, #351D10 57%, #2D180E 70%);
     z-index: -2;
   }
 
   &:after {
-    background: url('//d3oq02h3m4c5do.cloudfront.net/assets/splash/ftr-overlay-5a9329984201d315f6fcc5d5411a97d2.png') no-repeat top right;
+    background: url('/images/layout/footer.png') no-repeat top right;
     background-size: 100% auto;
     z-index: -1;
   }
 
   color: $color-tertiary;
-  padding: 3em 0 16em;
+  padding: 1.5em 0 16em;
   position: relative;
   width: 100%;
   z-index: 2;

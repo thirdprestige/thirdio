@@ -3,7 +3,10 @@ $ ->
   $('nav a').click (e)-> e.stopPropagation()
 
   try
-    unless $(document).scrollTop() > 0
+    if $(document).scrollTop() > 0
+      $('.initial').removeClass 'initial'
+
+    else
       html2canvas $('body'), onrendered: (canvas)->
         $('.initial').removeClass 'initial'
 
